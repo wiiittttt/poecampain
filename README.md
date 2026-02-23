@@ -14,10 +14,11 @@ Terminal based campaign guide for Path of Exile.
 * You will need [Go](https://go.dev/) to build the app.
 * A [Nerd Font](https://www.nerdfonts.com) is required to render all text.
 * This guide was made for my own use. There may be important information, directions, or optional content not included. Feel free to modify the guide for your own purpose.
-* Only tested on Linux but might work on other platforms.
+* Mainly tested on Linux, but should work on all platforms.
 * No other features planned at this time. (ex. POB import for gems)
 
-## ~/.config/poecampain/config.yaml
+## Config
+### ~/.config/poecampain/config.yaml
 `client: /path/to/Path of Exile/logs/Client.txt`
 
 Default: `~/.steam/steam/steamapps/common/Path of Exile/logs/Client.txt`
