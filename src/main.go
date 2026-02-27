@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	tea "github.com/charmbracelet/bubbletea"
+	tea "charm.land/bubbletea/v2"
 )
 
 func exePath() string {
@@ -40,7 +40,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	if _, err := tea.NewProgram(NewGuideModel(guide, clientTail), tea.WithAltScreen()).Run(); err != nil {
+	if _, err := tea.NewProgram(NewGuideModel(guide, clientTail)).Run(); err != nil {
 		log.Fatalln(err)
 	}
 }

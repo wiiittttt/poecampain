@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
+	tea "charm.land/bubbletea/v2"
 	"github.com/SEKOIA-IO/tail"
-	tea "github.com/charmbracelet/bubbletea"
 )
 
 type guideModel struct {
@@ -62,20 +62,22 @@ func (m guideModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, nil
 }
 
-func (m guideModel) View() string {
+func (m guideModel) View() tea.View {
 	if m.quitting {
 		m.tail.Cleanup()
 
 		if err := writeState(m.guide.Pos); err != nil {
-			return fmt.Sprintf("failed to save state: %v", err)
+			return tea.NewView(fmt.Sprintf("failed to save state: %v", err))
 		}
 
-		return ""
+		return tea.NewView("")
 	}
 
 	if m.err != nil {
-		return m.err.Error()
+		return tea.NewView(m.err.Error())
 	}
 
-	return m.guide.Display()
+	v := tea.NewView(m.guide.Display())
+	v.AltScreen = true
+	return v
 }

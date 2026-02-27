@@ -3,8 +3,8 @@ package main
 import (
 	"regexp"
 
+	tea "charm.land/bubbletea/v2"
 	"github.com/SEKOIA-IO/tail"
-	tea "github.com/charmbracelet/bubbletea"
 )
 
 var zoneRe = regexp.MustCompile(`You\shave\sentered\s(.*?)\.`)
