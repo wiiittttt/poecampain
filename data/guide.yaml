@@ -412,8 +412,8 @@
   craft(Accuracy Rank_1)
   waypoint(1_5_town)
 - |
-  portal(1_5_3b)
   quest(Lani Kitava's_Torments)
+  portal(1_5_3b)
 - |
   text(Go_󰁛)
   zone(1_5_8)
