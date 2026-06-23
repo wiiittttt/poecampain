@@ -22,7 +22,11 @@
   quest(Nessa Mercy_Mission)
   waypoint(1_1_4_1)
 - |
-  setportal(bridge)
+  zone(1_1_4_0)
+- |
+  kill(Dweller)
+  zone(1_1_4_1)
+- |
   zone(1_1_5)
 - |
   zone(1_1_6)
@@ -30,13 +34,6 @@
   zone(1_1_7_1)
 - |
   waypoint(1_1_town)
-- |
-  portal(1_1_4_1)
-- |
-  zone(1_1_4_0)
-- |
-  kill(Dweller)
-  relog(1_1_town)
 - |
   quest(Tarkleigh The_Dweller_of_the_Deep)
   quest(Nessa The_Caged_Brute)
@@ -100,6 +97,7 @@
   relog(1_2_town)
 - |
   quest(Greust Intruders_in_Black)
+  npc(Talk_to_Helena)
   waypoint(1_2_3)
 - |
   text(Go_󰁃)
